@@ -1,3 +1,5 @@
+# Episode 07: sync, async and setTImeoutZero
+
 ## Synchronous
 
 - Blocks the execution until the current operation is completed.

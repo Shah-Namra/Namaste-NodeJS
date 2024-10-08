@@ -20,9 +20,6 @@
 - Any callbacks associated with closing operations, such as socket closures, are handled here.
 - This phase is typically used for cleanup tasks, ensuring that resources are properly released.
 
-![Event Loop Cycle](../Notes/images/Lecture9/image1.png)
-![Event Loop Cycle](../Notes/images/Lecture9/image2.png)
-
 
 ### Microtasks: process.nextTick() and Promise Callbacks
 - Before the event loop moves to the next phase, it first processes any pending microtasks.
@@ -31,6 +28,11 @@
 - Promise callbacks: These are added to the microtask queue and processed after the current phase of the event loop but before moving to the next one.
 >Note: Microtasks can keep running until the queue is empty, so it is possible to starve the event loop by continuously adding new microtasks with `process.nextTick()` or Promises.
 >
+
+
+![Event Loop Cycle](../Notes/images/Lecture9/image1.png)
+
+![Event Loop Cycle](../Notes/images/Lecture9/image2.png)
 
 # Code Examples and Output 
 
@@ -196,4 +198,6 @@ operations. This means that if you have nested process.nextTick callbacks, the
 inner process.nextTick callback will be executed before the outer one.
  >
 
-    
+## in short 
+- Execution Priority: `process.nextTick()` > Promises > Timers (setTimeout) > `setImmediate()` > I/O callbacks
+- Avoid starving the event loop with too many microtasks (e.g., `process.nextTick()`).
