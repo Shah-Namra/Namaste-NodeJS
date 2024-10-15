@@ -1,70 +1,24 @@
-### Database:
-
-- It is an **organized** collection of data.
-- type of data store based on the use of a Database Management System
-    - software which interacts with end users, applications, and the database itself to capture and analyse the data
-
-![Types of Databses](../Notes/images/Lecture12/1.png)
-
-### RDBMS (MySQL, PostgreSQL)
-
-- EF Codd - Codd’s 12 rules (0 - 12)
-    - If your Database follows these 12 rules, then your DB becomes Relational DB.
-- Michael Widenius created MySQL,
-    - He also created MarioDB and MaxDB
-    - MySQL forks MarioDB
-- Sun MicroSystems acquired MySQL, and ORACLE now acquires Sun Micro System.
-
-- PostgreSQL was created by Michael
-    - Ingres → PostIngres → PostgreSQL (Name evolve)
-
-- SQL ⇒ Structured Query Language
-
-### NoSQL ( MongoDB)
-
-- Document DB, Key value DB, Graph DB, wide column DB, Multi Model DB
-- NoSQL created in 1998
-- MongoDB was created in 2009 and coincidentally nodejs was also developed in same year
-    - Created by 10gen
-    - Developer Friendly
-    - Compatible with JS stack
-    - Stores data in JSON
-
-## RDBMS  vs NoSQL
-
-![image.png](../Notes/images/Lecture12/2.png)
-
-![Difference between RDBMS NoSQL](../Notes/images/Lecture12/3.png)
-
-### RDBMS (MySQL)
-
-- Table, Rows and Columns
-- Structured Data
-- Fixed Schema
-- SQL (Structured Query Language)
-- Tough to horizontal scaling
-- Relationships ⇒ Foreign keys + joints
-- good for read-heavy apps transaction workloads
-- Ex: Banking Apps
-
-### NoSQL (MongoDB)
-- Collection, Documents and Fields
-- Unstructured Data
-- Flexible Schema
-- Mongo (MQL), Neo4j (Cypher), language depends type of DB
-- Easy to Scale horizontally + vertically
-- Nested Relationships
-- Real-time, big data, **distributed computing**
-- Ex: Real-time analytics, social media
-
-Read About Uber’s Schemaless Database using MySQL https://www.uber.com/en-IN/blog/schemaless-part-one-mysql-datastore/
-
----
+# Episode 12: Databses SQL and NoSQL
 
 ### Database
 
 - **Organized** collection of data.
 - Uses **DBMS** (Database Management System) for interaction between users, applications, and data.
+
+![Types of Databses](../Notes/images/Lecture12/1.png)
+### Types of Databases
+
+1. **Relational DB (RDBMS)**: MySQL, PostgreSQL.
+2. **NoSQL DB**: MongoDB.
+3. **In-memory DB**: Redis. (Caching, session management.)
+4. **Distributed SQL DB**: CockroachDB. (Global apps, multi-region apps.)
+5. **Time Series DB**: InfluxDB. (IoT, monitoring systems.)
+6. **Object-Oriented DB**: db4o. (Complex data structures, object-oriented programming.)
+7. **Graph DB**: Neo4j. (Social media, fraud detection.)
+8. **Hierarchical DB**: IBM IMS. (Legacy systems, mainframes.)
+9. **Network DB**: IDMS. (Large-scale applications, complex queries.)
+10. **Cloud DB**: Amazon RDS. ( Scalable applications, cloud-native apps.)
+
 
 ### RDBMS (MySQL, PostgreSQL)
 
@@ -84,6 +38,10 @@ Read About Uber’s Schemaless Database using MySQL https://www.uber.com/en-IN/b
 
 ### RDBMS vs NoSQL
 
+![image.png](../Notes/images/Lecture12/2.png)
+
+![Difference between RDBMS NoSQL](../Notes/images/Lecture12/3.png)
+
 - **RDBMS (e.g., MySQL, PostgreSQL)**
     - Structured data: **Tables, Rows, Columns**.
     - **Fixed Schema**.
@@ -97,18 +55,7 @@ Read About Uber’s Schemaless Database using MySQL https://www.uber.com/en-IN/b
     - Real-time data, Big Data, distributed computing.
     - Best for real-time analytics, social media apps.
 
-### Types of Databases
 
-1. **Relational DB (RDBMS)**: MySQL, PostgreSQL.
-2. **NoSQL DB**: MongoDB.
-3. **In-memory DB**: Redis.
-4. **Distributed SQL DB**: CockroachDB.
-5. **Time Series DB**: InfluxDB.
-6. **Object-Oriented DB**: db4o.
-7. **Graph DB**: Neo4j.
-8. **Hierarchical DB**: IBM IMS.
-9. **Network DB**: IDMS.
-10. **Cloud DB**: Amazon RDS.
 
 ### Key Differences
 
@@ -132,3 +79,90 @@ Read About Uber’s Schemaless Database using MySQL https://www.uber.com/en-IN/b
 
 - **RDBMS**: Banking apps, transaction-heavy systems.
 - **NoSQL**: Real-time analytics, content management systems.
+
+
+Read About Uber’s Schemaless Database using MySQL https://www.uber.com/en-IN/blog/schemaless-part-one-mysql-datastore/
+
+--- 
+
+### DBMS Components
+
+1. **DDL (Data Definition Language)**: Define and manage database structure.
+    - **CREATE**: Create database, tables, indexes.
+    - **ALTER**: Modify database structure.
+    - **DROP**: Delete objects.
+    - **TRUNCATE**: Remove all records.
+    - **COMMENT**: Add comments.
+2. **DML (Data Manipulation Language)**: Manipulate data.
+    - **INSERT**: Insert data.
+    - **UPDATE**: Modify data.
+    - **DELETE**: Delete data.
+    - **SELECT**: Query data.
+3. **DCL (Data Control Language)**: Control access to data.
+    - **GRANT**: Give access.
+    - **REVOKE**: Take back access.
+4. **TCL (Transaction Control Language)**: Manage transactions.
+    - **COMMIT**: Save changes.
+    - **ROLLBACK**: Undo changes.
+
+### SQL
+
+- **Structured Query Language**.
+- **Types**:
+    - **DDL**: Create, Alter, Drop, Truncate.
+    - **DML**: Insert, Update, Delete, Select.
+    - **DCL**: Grant, Revoke.
+    - **TCL**: Commit, Rollback.
+- **Operators**: Logical, Comparison, Arithmetic.
+- **Functions**: Aggregate, String, Date, Math.
+- **Constraints**: Primary Key, Foreign Key, Unique, Not Null.
+- **Joins**: Inner Join, Outer Join, Self Join.
+- **Indexes**: Clustered, Non-Clustered.
+- **Views**: Virtual tables, complex queries.
+- **Transactions**: ACID properties, Consistency, Isolation, Durability.
+- **Normalization**: Reduce redundancy, improve data integrity.
+- **Stored Procedures**: Precompiled SQL queries.
+- **Triggers**: Automatically executed SQL code.
+- **Cursors**: Iterate over a result set.
+- **Transactions**: Group of SQL queries executed
+
+--- 
+### MySQL
+
+- **Open-source** RDBMS.
+- **Client-Server** model.
+- **ACID** properties.
+- **SQL**.
+- **Storage Engines**: InnoDB (default), MyISAM.
+- **Replication**: Master-Slave, Master-Master.
+- **Partitioning**: Vertical, Horizontal.
+- **Sharding**: Splitting data across multiple servers.
+- **Performance Tuning**: Indexing, Query Optimization.
+- **Security**: User management, SSL.
+- **Backup and Recovery**: mysqldump, binary logs.
+
+### PostgreSQL
+
+- **Open-source** RDBMS.
+- **ACID** properties.
+- **SQL**.
+- **Extensible**: Supports user-defined functions, data types.
+- **Replication**: Master-Slave, Master-Master.
+- **Partitioning**: Range, List, Hash.
+- **Security**: User management, SSL.
+- **Performance Tuning**: Indexing, Query Optimization.
+- **Backup and Recovery**: pg_dump, WAL.
+
+### MongoDB
+
+- **Open-source** NoSQL DB.
+- **Document-oriented**.
+- **JSON**-like format.
+- **BSON** (Binary JSON) format.
+- **Schema-less**.
+- **Replication**: Master-Slave, Master-Master.
+- **Sharding**: Horizontal scaling.
+- **Indexing**: Single-field, Compound, Multi-key.
+- **Aggregation Framework**: Pipeline for data aggregation.
+- **Security**: User management, SSL.
+- **Backup and Recovery**: mongodump, oplog.
