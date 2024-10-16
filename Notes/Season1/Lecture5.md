@@ -1,4 +1,4 @@
-# Lecture 4 Notes
+# Episode 4: Diving into the NodeJS github repo
 ## Node.js Modules and IIFE
 
 ## IIFE (Immediately Invoked Function Expression)

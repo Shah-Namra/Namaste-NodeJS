@@ -1,4 +1,5 @@
-# Lecture 4 Notes
+# Episode 4: module.export & require
+ 
 
 In Node.js, modules allow you to separate your code into individual files and make the code easier to maintain. This guide explains how to use **CommonJS** modules and **ES Modules** (introduced in ES6) for exporting and importing functionality across different files.
 
