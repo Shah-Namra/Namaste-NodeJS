@@ -5,7 +5,7 @@
 - **Organized** collection of data.
 - Uses **DBMS** (Database Management System) for interaction between users, applications, and data.
 
-![Types of Databses](../Notes/images/Lecture12/1.png)
+![Types of Databses](../images/Lecture12/1.png)
 ### Types of Databases
 
 1. **Relational DB (RDBMS)**: MySQL, PostgreSQL.
@@ -38,9 +38,9 @@
 
 ### RDBMS vs NoSQL
 
-![image.png](../Notes/images/Lecture12/2.png)
+![image.png](../images/Lecture12/2.png)
 
-![Difference between RDBMS NoSQL](../Notes/images/Lecture12/3.png)
+![Difference between RDBMS NoSQL](../images/Lecture12/3.png)
 
 - **RDBMS (e.g., MySQL, PostgreSQL)**
     - Structured data: **Tables, Rows, Columns**.

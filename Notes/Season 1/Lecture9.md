@@ -30,9 +30,9 @@
 >
 
 
-![Event Loop Cycle](../Notes/images/Lecture9/image1.png)
+![Event Loop Cycle](../images/Lecture9/image1.png)
 
-![Event Loop Cycle](../Notes/images/Lecture9/image2.png)
+![Event Loop Cycle](../images/Lecture9/image2.png)
 
 # Code Examples and Output 
 

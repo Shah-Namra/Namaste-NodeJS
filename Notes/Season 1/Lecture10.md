@@ -5,9 +5,9 @@
 - in Node.js the size of the thread pool is 4 by default (`UV_THREADPOOL_SIZE`)
 
 
-![Single Threaded or Multi Threaded ?](../Notes/images/lecture10/2.png)
+![Single Threaded or Multi Threaded ?](../images/lecture10/2.png)
 
-![Single Threaded or Multi Threaded ?](../Notes/images/lecture10/3.png)
+![Single Threaded or Multi Threaded ?](../images/lecture10/3.png)
 
 ### What will happen if I make 5 file reading calls simultaneously?
 - The first 4 file read operations will execute in parallel.
@@ -24,7 +24,7 @@
 
 ### Dont do this on main thread
 
-![Dos and Don'ts](../Notes/images/lecture10/4.png)
+![Dos and Don'ts](../images/lecture10/4.png)
 
 
 - sync methods

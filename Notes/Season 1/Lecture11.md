@@ -12,7 +12,7 @@
 **EC2 instance**: a virtual server rented on AWS, which takes care of hardware while you deploy your application on VM 
 
  
-![image.png](../Notes/images/lecture11/1.png)
+![image.png](../images/lecture11/1.png)
 
 ### TCP/IP  protocol
 
@@ -32,7 +32,7 @@
 3. **Domain Name System (DNS)**:
     - responsible for translating domain names into IP addresses.
 
-![image.png](../Notes/images/lecture11/2.png)
+![image.png](../images/lecture11/2.png)
 
 
 
